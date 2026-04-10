@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import Footer from '../components/Footer';
 
 export default function Contact() {
