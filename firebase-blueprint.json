@@ -1,0 +1,34 @@
+{
+  "entities": {
+    "Lead": {
+      "title": "Lead",
+      "description": "A user who submitted their information via the funnel.",
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "The first name of the lead."
+        },
+        "email": {
+          "type": "string",
+          "format": "email",
+          "description": "The email address of the lead."
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time",
+          "description": "The timestamp when the lead was created."
+        }
+      },
+      "required": ["name", "email", "createdAt"]
+    }
+  },
+  "firestore": {
+    "/leads/{leadId}": {
+      "schema": {
+        "$ref": "#/entities/Lead"
+      },
+      "description": "Collection of leads."
+    }
+  }
+}

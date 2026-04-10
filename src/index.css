@@ -1,0 +1,83 @@
+@import "tailwindcss";
+
+@theme {
+  --color-red: #c0392b;
+  --color-red-dark: #96281b;
+  --color-red-bright: #e74c3c;
+  --color-dark: #111111;
+  --color-darker: #0a0a0a;
+  --color-gold: #FFC200;
+}
+
+@layer base {
+  body {
+    @apply bg-[#111] text-white font-sans overflow-x-hidden;
+    font-family: 'Barlow', sans-serif;
+  }
+}
+
+@keyframes pulse-bg {
+  from { background: var(--color-red); }
+  to   { background: var(--color-red-dark); }
+}
+
+@keyframes flicker {
+  0%,100% { opacity: 1; }
+  92% { opacity: 1; }
+  93% { opacity: 0.4; }
+  94% { opacity: 1; }
+  97% { opacity: 0.6; }
+  98% { opacity: 1; }
+}
+
+@keyframes ripple {
+  0%   { box-shadow: 0 0 0 0 rgba(192,57,43,0.6); }
+  70%  { box-shadow: 0 0 0 30px rgba(192,57,43,0); }
+  100% { box-shadow: 0 0 0 0 rgba(192,57,43,0); }
+}
+
+@keyframes modal-in {
+  from { opacity: 0; transform: scale(0.85) translateY(20px); }
+  to   { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+.animate-pulse-bg {
+  animation: pulse-bg 3s infinite alternate;
+}
+
+.animate-flicker {
+  animation: flicker 4s infinite;
+}
+
+.animate-ripple {
+  animation: ripple 2s infinite;
+}
+
+.animate-modal-in {
+  animation: modal-in 0.35s cubic-bezier(0.34,1.56,0.64,1) both;
+}
+
+@layer utilities {
+  .reveal {
+    opacity: 0;
+    transform: translateY(28px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+  .reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.markdown-body {
+  @apply text-gray-300 leading-relaxed;
+}
+.markdown-body h1, .markdown-body h2, .markdown-body h3 {
+  @apply text-white font-bold mt-8 mb-4;
+  font-family: 'Bebas Neue', sans-serif;
+}
+.markdown-body h1 { @apply text-4xl; }
+.markdown-body h2 { @apply text-3xl; }
+.markdown-body p { @apply mb-4; }
+.markdown-body ul { @apply list-disc pl-6 mb-4; }
+.markdown-body a { @apply text-red-bright hover:underline; }
