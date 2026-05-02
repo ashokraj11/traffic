@@ -258,7 +258,7 @@ export default function Home() {
                   type="text" 
                   value={name}
                   onChange={(e) => setName(e.target.value)}
-                  placeholder="e.g. Ashok" 
+                  placeholder="eg Joe" 
                   className="w-full bg-[#1e1e1e] border border-[#333] rounded p-3.5 text-white font-['Barlow'] text-[15px] outline-none transition-colors focus:border-[var(--color-red)] placeholder:text-[#555]"
                 />
               </div>
