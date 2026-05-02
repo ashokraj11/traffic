@@ -138,7 +138,7 @@ export default function Home() {
         >
           <div className="absolute inset-0 bg-[#0d0d0d]">
             <img 
-              src="/cover.png" 
+              src="https://cdn.vectorstock.com/i/500p/43/34/modern-video-player-for-web-vector-48034334.jpg" 
               alt="Digital Suicide Video Training" 
               className="absolute inset-0 w-full h-full object-cover opacity-80 transition-opacity duration-300 group-hover:opacity-100" 
             />
