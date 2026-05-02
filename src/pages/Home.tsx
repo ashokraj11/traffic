@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { collection, addDoc, serverTimestamp } from 'firebase/firestore';
 import { db } from '../firebase';
-import { downloadLeadMagnet } from '../utils/download';
 import Footer from '../components/Footer';
 
 export default function Home() {
@@ -50,11 +49,8 @@ export default function Home() {
 
       // 2. Show success message
       setSuccessMessage('Success! Redirecting you to the masterclass...');
-      
-      // 3. Trigger PDF download
-      downloadLeadMagnet();
 
-      // 4. Redirect to affiliate offer in new tab
+      // Redirect to affiliate offer in new tab
       setTimeout(() => {
         window.open('https://warriorplus.com/o2/a/j7gbn11/0', '_blank');
         closeModal();
