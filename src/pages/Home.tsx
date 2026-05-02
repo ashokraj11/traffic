@@ -136,17 +136,12 @@ export default function Home() {
           className="relative w-full aspect-video bg-black border-[3px] border-[#222] rounded-md overflow-hidden cursor-pointer shadow-[0_0_80px_rgba(192,57,43,0.25)] transition-shadow duration-300 hover:shadow-[0_0_120px_rgba(192,57,43,0.45)] group"
           onClick={openModal}
         >
-          <div className="absolute inset-0 bg-[linear-gradient(135deg,#0d0d0d_0%,#1a0000_50%,#0d0d0d_100%)] flex items-center justify-center">
-            <svg className="absolute inset-0 w-full h-full opacity-30" viewBox="0 0 900 500" xmlns="http://www.w3.org/2000/svg">
-              <line x1="450" y1="250" x2="300" y2="80" stroke="#fff" strokeWidth="1.5"/>
-              <line x1="450" y1="250" x2="600" y2="120" stroke="#fff" strokeWidth="1"/>
-              <line x1="300" y1="80" x2="180" y2="200" stroke="#fff" strokeWidth="0.8"/>
-              <line x1="600" y1="120" x2="720" y2="300" stroke="#fff" strokeWidth="0.8"/>
-              <line x1="450" y1="250" x2="350" y2="420" stroke="#fff" strokeWidth="1"/>
-              <line x1="450" y1="250" x2="580" y2="400" stroke="#fff" strokeWidth="0.7"/>
-            </svg>
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-[60%] font-['Bebas_Neue'] text-[clamp(60px,10vw,120px)] text-[var(--color-red-bright)] leading-none drop-shadow-[0_0_40px_rgba(231,76,60,0.6)] animate-flicker">0</div>
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 translate-y-[30%] font-['Bebas_Neue'] text-[clamp(14px,2vw,22px)] tracking-[3px] text-white opacity-80">TRAFFIC</div>
+          <div className="absolute inset-0 bg-[#0d0d0d]">
+            <img 
+              src="/cover.png" 
+              alt="Digital Suicide Video Training" 
+              className="absolute inset-0 w-full h-full object-cover opacity-80 transition-opacity duration-300 group-hover:opacity-100" 
+            />
           </div>
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80px] h-[80px] bg-[var(--color-red)] rounded-full flex items-center justify-center transition-all duration-200 shadow-[0_0_0_0_rgba(192,57,43,0.6)] animate-ripple z-10 group-hover:bg-[var(--color-red-bright)] group-hover:scale-110">
             <div className="w-0 h-0 border-y-[14px] border-y-transparent border-l-[26px] border-l-white ml-1.5"></div>
